@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/15 12:28:15 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/10/15 13:46:28 by pvitor-l         ###   ########.fr       */
+/*   Created: 2024/10/15 18:18:45 by pvitor-l          #+#    #+#             */
+/*   Updated: 2024/10/15 19:13:55 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
 
-int	ft_strlen(const char *s)
+int	ft_toupper(int c)
 {
-	int	i;
-
-	i = 0;
-	while (s[i] != '\0')
+	if (c >= 'a' && c <= 'z')
 	{
-		i++;
+		return (c - 32);
 	}
-	return (i);
+	return (c);
+}
+
+int	main(void)
+{
+	int small_letter = 's';
+	
+	int result = ft_toupper(small_letter);
+	printf("%c", result );
 }
