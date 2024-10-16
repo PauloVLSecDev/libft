@@ -1,23 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/15 18:18:45 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/10/16 13:18:34 by pvitor-l         ###   ########.fr       */
+/*   Created: 2024/10/16 15:50:49 by pvitor-l          #+#    #+#             */
+/*   Updated: 2024/10/16 19:55:05 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+#include <libft.h>
 
-int	ft_toupper(int c)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	if (c >= 'a' && c <= 'z')
+	unsigned int	i;
+	unsigned char	*copy;
+	unsigned char	*source;
+
+	source = (unsigned char *) src;
+	copy = (unsigned char *) dest;
+	i = 0;
+	if (source == (void *)0 && dest == (void *)0)
 	{
-		return (c - 32);
+		return (NULL);
 	}
-	return (c);
+	while (i < n)
+	{
+		copy[i] = source[i];
+		i++;
+	}
+	return (copy);
 }
