@@ -6,14 +6,11 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 14:21:28 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/10/18 17:25:18 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/10/22 14:35:45 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-
-int	ft_strlen(const char *c);
+#include "libft.h"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {

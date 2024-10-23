@@ -6,31 +6,27 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 19:09:48 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/10/18 17:12:44 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/10/22 20:49:10 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <unistd.h>
-#include <stdio.h>
-
-int	ft_strlen(const char *c);
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dest, const char *str, size_t size)
 {
-	size_t	count;
+	size_t	i;
 	size_t	len;
 
-	count = 0;
+	i = 0;
 	len = ft_strlen(str);
-	if (size == 0)
+	if (size > 0)
 	{
-		return (len);
-	}
-	while (count < size -1 && str[count] != '\0')
-	{
-		dest[count] = str[count];
-		count++;
+		while (str[i] && i < size - 1)
+		{
+			dest[i] = str[i];
+			i++;
+		}
+		dest[i] = '\0';
 	}
 	return (len);
 }

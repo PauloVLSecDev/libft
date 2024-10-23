@@ -6,12 +6,11 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 12:28:15 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/10/15 13:46:28 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/10/22 15:06:38 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_strlen(const char *s)
 {

@@ -6,11 +6,11 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 20:44:46 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/10/18 14:33:59 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/10/22 15:25:46 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

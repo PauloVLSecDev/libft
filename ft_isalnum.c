@@ -6,16 +6,11 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 20:00:36 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/10/14 20:37:23 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/10/22 14:32:43 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-
-int	ft_isdigit(int c);
-
-int	ft_isalpha(int c);
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {
