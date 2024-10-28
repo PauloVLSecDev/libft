@@ -6,7 +6,7 @@
 #    By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/21 14:49:20 by pvitor-l          #+#    #+#              #
-#    Updated: 2024/10/26 15:57:23 by pvitor-l         ###   ########.fr        #
+#    Updated: 2024/10/28 15:01:25 by pvitor-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,8 @@ FILE = ft_isalpha.c \
 	ft_strlcpy.c \
 	ft_strchr.c \
 	ft_strrchr.c \
-	ft_strncmp.c
+	ft_strncmp.c \
+	ft_strnstr.c
 
 OBJS = $(FILE:.c=.o)
 

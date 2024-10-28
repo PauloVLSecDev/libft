@@ -6,7 +6,7 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 17:43:31 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/10/26 19:09:14 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/10/28 17:02:09 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,25 +16,25 @@
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t		i;
-	char		*search;	
-	char		*book;
+	size_t		j;
+	size_t		len_little;
 
-	i = 0;
-	search = (char *)little;
-	book = (char *)big;
-
-	while (*book != '\0' && i < len - 1)
+	len_little = ft_strlen(little);
+	if (*little == '\0')
+		return ((char *)big);
+	j = 0;
+	while (big[j] != '\0' && j < len)
 	{
-		while (*search != '\0' && *book == *search)
+		i = 0;
+		if (j + len_little > len)
+			return (NULL);
+		while (little[i] != '\0' && little[i] == big[i + j])
 		{
-			*search++ = *book++;
+			i++;
 		}
-		i++;
+		if (little[i] == '\0')
+			return ((char *)&big[j]);
+		j++;
 	}
-	return (search);
-}
-int	main(void)
-{
-	char *result = ft_strnstr("a paravra menor deve estar dentro desta daqui", "deve", 20);
-	printf("%s\n", result);
+	return (NULL);
 }
