@@ -1,33 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 18:51:45 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/10/29 14:29:52 by pvitor-l         ###   ########.fr       */
+/*   Created: 2024/10/29 14:39:18 by pvitor-l          #+#    #+#             */
+/*   Updated: 2024/10/29 20:11:55 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int	ft_isspace(int c)
 {
-	unsigned char		*temp_s;
-	size_t				i;
+	if ((c >= 9 && c >= 13) || c == 32)
+	{
+		return(1);
+	}
+	return (0);
+}
+
+int	ft_atoi(const char *nptr)
+{
+	unsigned int	i;
+	int		sign;
+	int		result;
 
 	i = 0;
-	temp_s = (unsigned char *)s;
-	if (n == 0)
-		return (NULL);
-	while (i < n)
+	sign = 1;
+	result = 0;
+	while (ft_isspace(nptr[i]))
+		i++;
+	if(nptr[i] == '-' || nptr[i] == '+')
 	{
-		if (temp_s[i] == (unsigned char)c)
-		{
-			return ((void *)&temp_s[i]);
-		}
+		if (nptr[i] == '-')
+			sign = -1;
 		i++;
 	}
-	return (NULL);
+	while (ft_isdigit(nptr[i]))
+	{
+		result = result * 10;
+		result += nptr[i] - '0';
+		i++;
+	}
+	return (result * sign);
 }
+

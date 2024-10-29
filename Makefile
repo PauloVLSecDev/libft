@@ -6,7 +6,7 @@
 #    By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/21 14:49:20 by pvitor-l          #+#    #+#              #
-#    Updated: 2024/10/28 15:01:25 by pvitor-l         ###   ########.fr        #
+#    Updated: 2024/10/29 19:54:10 by pvitor-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ FILE = ft_isalpha.c \
 	ft_isdigit.c \
 	ft_isalnum.c \
 	ft_isprint.c \
+	ft_atoi.c \
 	ft_tolower.c \
 	ft_toupper.c \
 	ft_memcpy.c \
@@ -31,7 +32,9 @@ FILE = ft_isalpha.c \
 	ft_strchr.c \
 	ft_strrchr.c \
 	ft_strncmp.c \
-	ft_strnstr.c
+	ft_strnstr.c \
+	ft_memchr.c \
+	ft_memcmp.c
 
 OBJS = $(FILE:.c=.o)
 
