@@ -6,17 +6,17 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 14:39:18 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/10/29 20:11:55 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/10/30 20:21:33 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isspace(int c)
+static int	ft_isspace(int c)
 {
-	if ((c >= 9 && c >= 13) || c == 32)
+	if ((c >= 9 && c <= 13) || c == 32)
 	{
-		return(1);
+		return (1);
 	}
 	return (0);
 }
@@ -24,15 +24,15 @@ int	ft_isspace(int c)
 int	ft_atoi(const char *nptr)
 {
 	unsigned int	i;
-	int		sign;
-	int		result;
+	int				sign;
+	int				result;
 
 	i = 0;
 	sign = 1;
 	result = 0;
 	while (ft_isspace(nptr[i]))
 		i++;
-	if(nptr[i] == '-' || nptr[i] == '+')
+	if (nptr[i] == '-' || nptr[i] == '+')
 	{
 		if (nptr[i] == '-')
 			sign = -1;
@@ -46,4 +46,3 @@ int	ft_atoi(const char *nptr)
 	}
 	return (result * sign);
 }
-
