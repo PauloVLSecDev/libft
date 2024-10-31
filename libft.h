@@ -6,7 +6,7 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 13:20:07 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/10/30 17:56:30 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/10/30 20:58:46 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strdup(const char *s);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
+void	*ft_putchar_fd(char c, int fd);
+void    *ft_putstr_fd(char *s, int fd);
 
 #endif
