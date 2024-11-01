@@ -6,7 +6,7 @@
 #    By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/21 14:49:20 by pvitor-l          #+#    #+#              #
-#    Updated: 2024/10/30 21:22:14 by pvitor-l         ###   ########.fr        #
+#    Updated: 2024/11/01 18:47:18 by pvitor-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,13 @@ FILE = ft_isalpha.c \
 	ft_strdup.c \
 	ft_memcmp.c \
 	ft_putchar_fd.c \
-	ft_putstr_fd.c
+	ft_putstr_fd.c \
+	ft_putendl_fd.c \
+	ft_putnbr_fd.c \
+	ft_strjoin.c \
+	ft_strtrim.c \
+	ft_substr.c
+
 
 OBJS = $(FILE:.c=.o)
 
