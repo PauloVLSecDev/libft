@@ -6,7 +6,7 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 17:41:33 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/06 16:26:23 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/11/06 20:38:54 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,33 @@
 static	int	ft_count_string(char const *s, char c)
 {
 	int	count_strings;
+	int	boolean;
 
+	boolean = 0;
 	count_strings = 0;
-	if (!s)
-		return (0);
 	while (*s)
 	{
-		if (*s != c && (*(s + 1) == c || *(s + 1) == '\0'))
+		if (*s != c && !boolean)
+		{
+			boolean = 1;
 			count_strings++;
+		}
+		else if (*s == c)
+			boolean = 0;
 		s++;
 	}
 	return (count_strings);
 }
-
-static	char	*ft_and_copy(const char *start, size_t len)
+static	void	ft_free(char **split, size_t len )
+{
+       	while (len > 0)
+	{
+		free(split[len - 1]);
+		len--;
+	}
+	free(split);
+}
+static	char	*ft_copy(const char *start, size_t len)
 {
 	char	*string;
 
@@ -36,7 +49,6 @@ static	char	*ft_and_copy(const char *start, size_t len)
 	if(!string)
 		return (NULL);
 	ft_strlcpy(string, start, len + 1);
-	string[len] = '\0';
 	return (string);
 }
 static	void	ft_len_substring(char **result, const char *s, char c)
@@ -58,22 +70,24 @@ static	void	ft_len_substring(char **result, const char *s, char c)
 		if (search_string - s > start)
 		{
 			size = (size_t)(search_string - s - start);
-			result[count_len] = ft_and_copy(s + start, size);
-			count_len++;
+			result[count_len] = ft_copy(s + start, size);
+			if (!result[count_len])
+				ft_free(result, count_len);
 		}
+		count_len++;
 	}
 }
 char	**ft_split(char const *s, char c)
 {
 	char	**split;
-	int	len;
-
+	size_t	len;
 	if(!s)
 		return (NULL);
 	len = ft_count_string(s, c);
-	split = (char **)malloc(len + 1 * sizeof(char *);
-	if(!split)
+	split = (char **)malloc((len + 1) * sizeof(char *));
+	if (!split)
 		return (NULL);
 	ft_len_substring(split, s, c);
+	split[len] = NULL;
 	return (split);
 }
