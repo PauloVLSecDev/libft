@@ -6,7 +6,7 @@
 #    By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/21 14:49:20 by pvitor-l          #+#    #+#              #
-#    Updated: 2024/11/04 21:02:37 by pvitor-l         ###   ########.fr        #
+#    Updated: 2024/11/06 15:42:53 by pvitor-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,6 +46,7 @@ FILE = ft_isalpha.c \
 	ft_strmapi.c \
 	ft_substr.c \
 	ft_strtrim.c \
+	ft_split.c \
 	ft_striteri.c
 
 OBJS = $(FILE:.c=.o)
