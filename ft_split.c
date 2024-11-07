@@ -6,7 +6,7 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 17:41:33 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/06 20:38:54 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/11/07 15:28:03 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,31 +32,34 @@ static	int	ft_count_string(char const *s, char c)
 	}
 	return (count_strings);
 }
+
 static	void	ft_free(char **split, size_t len )
 {
-       	while (len > 0)
+	while (len > 0)
 	{
 		free(split[len - 1]);
 		len--;
 	}
 	free(split);
 }
-static	char	*ft_copy(const char *start, size_t len)
+
+static char	*ft_copy(const char *start, size_t len)
 {
 	char	*string;
 
 	string = (char *)malloc(len + 1);
-	if(!string)
+	if (!string)
 		return (NULL);
 	ft_strlcpy(string, start, len + 1);
 	return (string);
 }
+
 static	void	ft_len_substring(char **result, const char *s, char c)
 {
-	int		count_len;
+	int				count_len;
 	unsigned int	start;
-	char	*search_string;
-	size_t	size;
+	char			*search_string;
+	size_t			size;
 
 	count_len = 0;
 	search_string = (char *)s;
@@ -77,11 +80,13 @@ static	void	ft_len_substring(char **result, const char *s, char c)
 		count_len++;
 	}
 }
+
 char	**ft_split(char const *s, char c)
 {
 	char	**split;
 	size_t	len;
-	if(!s)
+
+	if (!s)
 		return (NULL);
 	len = ft_count_string(s, c);
 	split = (char **)malloc((len + 1) * sizeof(char *));
