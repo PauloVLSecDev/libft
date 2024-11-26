@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_istnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/15 12:28:15 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/08 18:22:07 by pvitor-l         ###   ########.fr       */
+/*   Created: 2024/11/26 18:36:23 by pvitor-l          #+#    #+#             */
+/*   Updated: 2024/11/26 19:13:45 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+t_list	*ft_istnew(void *content)
 {
-	int	i;
+	t_list *search;
+	search = (t_list *)malloc(sizeof(t_list));
+		if(!search)
+			return (NULL);
+	search->content = content;
+	search->next = NULL;
 
-	i = 0;
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
+	return (search);
 }

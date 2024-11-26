@@ -6,7 +6,7 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 17:41:33 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/07 15:28:03 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/11/08 20:39:52 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ static	int	ft_count_string(char const *s, char c)
 	int	count_strings;
 	int	boolean;
 
-	boolean = 0;
+	boolean = 1;
 	count_strings = 0;
 	while (*s)
 	{
-		if (*s != c && !boolean)
+		if (*s != c && boolean)
 		{
-			boolean = 1;
+			boolean = 0;
 			count_strings++;
 		}
 		else if (*s == c)

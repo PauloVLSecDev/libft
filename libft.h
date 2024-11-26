@@ -6,7 +6,7 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 13:20:07 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/08 13:58:46 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/11/26 19:13:47 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	*ft_memmove(void *dest, void *str, size_t len);
 void	*ft_memset(void *s, int c, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
-int		ft_strlen(const char *s);
+size_t		ft_strlen(const char *s);
 char	*ft_strchr(const char *str, int c);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
 size_t	ft_strlcpy(char	*dest, const char *str, size_t size);
@@ -51,4 +51,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char	**ft_split(char const *s, char c);
 
+typedef struct s_list
+{
+	void		*content;
+	struct  s_list	*next;
+}			t_list;	
 #endif
