@@ -6,7 +6,7 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:13:19 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/01 15:37:18 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/12/06 16:02:20 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	if (dest == NULL)
 		return (NULL);
 	while (index < len)
-	{
-		dest[index] = s[start];
-		index++;
-		start++;
-	}
+		dest[index++] = s[start++];
 	dest[index] = '\0';
 	return (dest);
 }
