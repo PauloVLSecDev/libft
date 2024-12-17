@@ -6,7 +6,7 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 18:43:52 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/10/30 20:24:25 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2024/12/09 18:14:42 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 char	*ft_strdup(const char *s)
 {
 	char		*dest;
+	int			len;
 	int			len;
 
 	len = ft_strlen(s) + 1;
