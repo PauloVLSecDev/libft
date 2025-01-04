@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/30 20:46:39 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/11/08 14:43:30 by pvitor-l         ###   ########.fr       */
+/*   Created: 2024/11/11 20:03:59 by pvitor-l          #+#    #+#             */
+/*   Updated: 2024/11/22 14:38:08 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-void	ft_putstr_fd(char *s, int fd)
-{
-	int	i;
+# include <stdlib.h>
+# include <unistd.h>
+# include <stdarg.h>
 
-	i = 0;
-	while (s[i] != '\0')
-	{
-		write(fd, &s[i], 1);
-		i++;
-	}
-}
+int	ft_printf(const char *format, ...);
+int	ft_putchar(char c);
+int	ft_putstr(char *s);
+int	putnbr(int n);
+int	ft_put_unsi(unsigned int n);
+int	ft_hex(unsigned long hexa, char c);
+int	ft_pnt(unsigned long point);
+#endif

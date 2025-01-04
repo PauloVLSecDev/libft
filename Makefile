@@ -6,7 +6,7 @@
 #    By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/21 14:49:20 by pvitor-l          #+#    #+#              #
-#    Updated: 2024/11/07 19:30:12 by pvitor-l         ###   ########.fr        #
+#    Updated: 2025/01/03 19:42:42 by pvitor-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,16 +38,19 @@ FILE = ft_isalpha.c \
 	ft_calloc.c \
 	ft_strdup.c \
 	ft_memcmp.c \
-	ft_putchar_fd.c \
-	ft_putstr_fd.c \
+	ft_putchar.c \
+	ft_putstr.c \
 	ft_putendl_fd.c \
-	ft_putnbr_fd.c \
+	ft_putnbr.c \
 	ft_strjoin.c \
 	ft_strmapi.c \
 	ft_substr.c \
 	ft_strtrim.c \
 	ft_split.c \
-	ft_striteri.c
+	ft_striteri.c \
+	ft_hexa.c \
+	ft_put_unsi.c \
+	ft_printf.c \
 
 OBJS = $(FILE:.c=.o)
 

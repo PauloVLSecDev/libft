@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_put_unsi.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/15 12:28:15 by pvitor-l          #+#    #+#             */
-/*   Updated: 2025/01/03 18:18:44 by pvitor-l         ###   ########.fr       */
+/*   Created: 2024/11/19 19:48:05 by pvitor-l          #+#    #+#             */
+/*   Updated: 2024/11/22 14:34:48 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-size_t	ft_strlen(const char *s)
+int	ft_put_unsi(unsigned int n)
 {
-	int	i;
+	int	len;
 
-	i = 0;
-	if(!s)
-		return (i);
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
+	len = 0;
+	if (n > 9)
+		len += ft_put_unsi((n / 10));
+	len += ft_putchar((n % 10) + '0');
+	return (len);
 }
