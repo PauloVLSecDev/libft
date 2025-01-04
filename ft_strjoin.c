@@ -6,7 +6,7 @@
 /*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 14:22:29 by pvitor-l          #+#    #+#             */
-/*   Updated: 2024/12/06 16:15:49 by pvitor-l         ###   ########.fr       */
+/*   Updated: 2025/01/04 13:33:59 by pvitor-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*s3;
-	size_t	size;
-	int	i;
+	char		*s3;
+	size_t		size;
+	int			i;
 
 	i = 0;
 	if (!s1 && !s2)
@@ -27,7 +27,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	while (*s1)
 		s3[i++] = *s1++;
-	while(*s2)
+	while (*s2)
 		s3[i++] = *s2++;
 	s3[i] = '\0';
 	return (s3);

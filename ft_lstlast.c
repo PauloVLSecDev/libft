@@ -1,10 +1,21 @@
-#include "libft.h"
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pvitor-l <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/04 13:38:42 by pvitor-l          #+#    #+#             */
+/*   Updated: 2025/01/04 13:46:26 by pvitor-l         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-t_list  *ft_lstlast(t_list *lst)
+#include "libft.h"
+
+t_list	*ft_lstlast(t_list *lst)
 {
 	if (lst == NULL)
-		return (NULL);	
+		return (NULL);
 	while (lst->next != NULL)
 		lst = lst->next;
 	return (lst);
